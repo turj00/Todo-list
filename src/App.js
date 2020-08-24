@@ -81,17 +81,30 @@ deleteTask= (id) => {
 
 addTodo = (title) =>{
 
-    const newTodo = {
+  if(title){
+
+    
+  
+  
+
+    const  newTodo = {
 
       id: Math.random() ,
       title: title,
       completed: false
 
     }
+  
 
  // console.log(title)
   this.setState({ todos: [...this.state.todos, newTodo]})
+  }
 
+  else if(!title){
+
+    alert("oopps...Cant add empty field. Please type something")
+  
+  }
 
 
 
